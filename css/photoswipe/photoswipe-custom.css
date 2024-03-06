@@ -1,0 +1,11 @@
+.pswp--custom {
+  --pswp-bg: #7079bf;
+}
+
+.pswp__counter {
+  display: none;
+}
+
+.pswp__button.pswp__button--zoom {
+  display: none;
+}

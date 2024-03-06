@@ -1,0 +1,117 @@
+// common
+@keyframes title-anime {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes title-anime-about {
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes Arrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes lineMove-visual {
+  0% {
+    bottom: 200px;
+    height: 0px;
+  }
+  20% {
+    bottom: 0;
+    height: 200px;
+  }
+  40% {
+    bottom: 0;
+    height: 0;
+  }
+  100% {
+    bottom: 0;
+    height: 0;
+  }
+}
+
+@keyframes lineMove {
+  0% {
+    bottom: 300px;
+    height: 0px;
+  }
+  20% {
+    bottom: 0;
+    height: 300px;
+  }
+  40% {
+    bottom: 0;
+    height: 0;
+  }
+  100% {
+    bottom: 0;
+    height: 0;
+  }
+}
+
+@keyframes project-ani {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media all and (min-width: 1282px) and (max-width: 1999px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 1281px) {
+  @keyframes lineMove {
+    0% {
+      bottom: 100px;
+      height: 0px;
+    }
+    20% {
+      bottom: 0;
+      height: 100px;
+    }
+    40% {
+      bottom: 0;
+      height: 0;
+    }
+    100% {
+      bottom: 0;
+      height: 0;
+    }
+  }
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+  @keyframes lineMove {
+    0% {
+      bottom: 100px;
+      height: 0px;
+    }
+    20% {
+      bottom: 0;
+      height: 100px;
+    }
+    40% {
+      bottom: 0;
+      height: 0;
+    }
+    100% {
+      bottom: 0;
+      height: 0;
+    }
+  }
+}

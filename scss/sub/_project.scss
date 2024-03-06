@@ -1,0 +1,305 @@
+.project {
+  // 웰컴 섹션
+  #projects {
+    position: relative;
+    width: 100%;
+    padding: 200px 4vw 100px;
+    z-index: 5;
+
+    .menu {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+      width: 100%;
+
+      .menu_top {
+        span {
+          font: 12px/1 'quasimoda-light';
+        }
+
+        img {
+          width: 10px;
+          margin-left: 5px;
+        }
+      }
+
+      ul {
+        display: flex;
+        z-index: 6;
+
+        li {
+          padding: 0 30px;
+          display: flex;
+          margin-left: 0;
+          transform: translateY(40px);
+          opacity: 0;
+          animation: title-anime 2.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+
+          &:nth-of-type(2) {
+            animation-delay: 0.2s;
+          }
+
+          &:nth-of-type(3) {
+            animation-delay: 0.3s;
+          }
+
+          &:nth-of-type(4) {
+            animation-delay: 0.4s;
+          }
+
+          &:hover {
+            a {
+              opacity: 1;
+            }
+          }
+
+          a {
+            font: 14px/1 'quasimoda-light';
+            letter-spacing: 2px;
+            opacity: 0.5;
+          }
+
+          &.on {
+            a {
+              opacity: 1;
+            }
+
+            a::after {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+
+      // &:hover {
+      //   ul {
+      //     display: flex;
+      //     flex-direction: column;
+      //     align-items: start;
+      //     position: absolute;
+      //     right: 0;
+      //     bottom: -87px;
+      //     padding-left: 15px;
+      //   }
+      // }
+    }
+
+    .masonry-container {
+      --gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: var(--gap);
+      grid-auto-rows: 10px;
+
+      .masonry-item {
+        opacity: 0;
+        transition: opacity 0.5s;
+        position: relative;
+        overflow: hidden;
+
+        a {
+          display: block;
+          overflow: hidden;
+        }
+
+        &:hover {
+          .pseudo-img {
+            overflow: hidden;
+
+            img {
+              transform: scale(1.02);
+            }
+          }
+        }
+
+        &.show {
+          opacity: 1;
+        }
+
+        .pseudo-img {
+          img {
+            width: 100%;
+            object-fit: cover;
+            transition: all 2.5s cubic-bezier(0.23, 1, 0.32, 1);
+          }
+
+          video {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .project_title {
+          padding: 20px 0;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          h3 {
+            font: 14px/1 'quasimoda-light';
+            margin-right: 5px;
+          }
+
+          span {
+            font: 14px/1 'quasimoda-light';
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+
+    // @media screen and (max-width: 720px) {
+    //   .masonry-container {
+    //     grid-template-columns: repeat(2, 1fr);
+    //   }
+    // }
+
+    // @media screen and (max-width: 400px) {
+    //   .masonry-container {
+    //     display: block;
+    //   }
+
+    //   .masonry-item {
+    //     margin-bottom: var(--gap);
+    //   }
+    // }
+
+    /* ignore this */
+    .pseudo-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+
+    // #list {
+    //   position: relative;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   flex-wrap: wrap;
+    //   z-index: 3;
+
+    //   .item {
+    //     width: calc(100% / 4);
+    //     margin-bottom: 20px;
+    //     padding: 7px;
+    //     transform: translateY(50px);
+    //     animation: project-ani 2.5s cubic-bezier(0.23, 1, 0.32, 1);
+    //     animation-fill-mode: forwards;
+    //     opacity: 0;
+
+    //     @for $i from 1 through 10 {
+    //       &:nth-child(#{$i}) {
+    //         animation-delay: 0.18s * $i;
+    //       }
+    //     }
+
+    //     &:hover {
+    //       .project_pic > img {
+    //         transform: scale(1.02);
+    //       }
+    //     }
+    //     .project_pic {
+    //       display: block;
+    //       width: 100%;
+    //       height: 500px;
+
+    //       img {
+    //         width: 100%;
+    //         height: 100%;
+    //         object-fit: cover;
+    //         transition: all 2.5s cubic-bezier(0.23, 1, 0.32, 1);
+    //       }
+
+    //       video {
+    //         width: 100%;
+    //         height: 100%;
+    //         object-fit: cover;
+    //       }
+    //     }
+
+    //     .project_title {
+    //       display: flex;
+    //       flex-direction: column;
+    //       align-items: start;
+
+    //       h3 {
+    //         font: 15px/1 'quasimoda-light';
+    //       }
+
+    //       span {
+    //         font: 14px/1 'quasimoda-light';
+    //         opacity: 0.5;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
+
+//테블릿
+@media all and (min-width: 768px) and (max-width: 1281px) {
+  .project {
+    #projects {
+      padding: 140px 4vw 150px;
+
+      .menu {
+        margin-bottom: 80px;
+
+        ul {
+          li {
+            padding: 0 20px;
+          }
+        }
+      }
+
+      .masonry-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+//모바일
+@media all and (max-width: 767px) {
+  .project {
+    #projects {
+      padding: 100px 4vw 100px;
+
+      .menu {
+        margin-bottom: 30px;
+
+        ul {
+          width: 100%;
+          justify-content: center;
+          margin-bottom: 15px;
+
+          li {
+            padding: 0 13px;
+
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .masonry-container {
+        display: block;
+
+        .masonry-item {
+          // margin-bottom: var(--gap);
+
+          .project_title {
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+  }
+}

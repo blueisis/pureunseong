@@ -1,0 +1,26 @@
+{
+  "name": "ezen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -wr ./scss/style.scss ./css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "imagemin": "^8.0.1",
+    "jquery": "^3.7.1",
+    "node-sass": "^9.0.0",
+    "photoswipe": "^5.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueisis/ezen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blueisis/ezen/issues"
+  },
+  "homepage": "https://github.com/blueisis/ezen#readme",
+  "description": ""
+}
